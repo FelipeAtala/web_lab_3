@@ -6,7 +6,7 @@ document.querySelector('#countryForm').addEventListener('submit', async (e) => {
   results.innerHTML = "<p>Ładowanie...</p>";
   try {
     const res = await fetch(`https://restcountries.com/v3.1/capital/${encodeURIComponent(capital)}`);
-    if (!res.ok) throw new Error("Nie znaleziono");
+    if (!res.ok) throw new Error("Nie znaleziono.");
     const data = await res.json();
     let table = `
       <table>
